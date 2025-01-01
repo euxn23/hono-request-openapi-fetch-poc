@@ -1,0 +1,25 @@
+{
+  "name": "hono-request-openapi-fetch-poc",
+  "version": "0.1.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx --watch src/main.ts",
+    "openapi:generate": "tsx bin/generate-openapi.ts && openapi-typescript openapi.json -o src/openapi/generated.d.ts",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@hono/node-server": "1.13.7",
+    "@hono/zod-openapi": "0.18.3",
+    "@types/node": "22.10.3",
+    "hono": "4.6.15",
+    "openapi-fetch": "0.13.3",
+    "openapi-typescript": "7.4.4",
+    "typescript": "5.7.2",
+    "zod": "3.24.1"
+  },
+  "devDependencies": {
+    "prettier": "3.4.2",
+    "tsx": "4.19.2",
+    "vitest": "2.1.8"
+  }
+}
